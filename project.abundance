@@ -1,13 +1,41 @@
 {
     "atomType": "Molecule",
-    "name": "RO Frame",
+    "name": "RO-Frame",
     "x": 0,
     "y": 0,
     "uniqueID": 1744258314640,
     "ioValues": [],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
-    "allAtoms": [],
+    "allAtoms": [
+        {
+            "atomType": "Output",
+            "name": "Output",
+            "x": 0.98,
+            "y": 0.5,
+            "uniqueID": 1744258323684,
+            "ioValues": [],
+            "description": "Connect geometry here to make it available in the next level up. "
+        },
+        {
+            "atomType": "Rectangle",
+            "name": "Rectangle",
+            "x": 0.5118733509234829,
+            "y": 0.37433155080213903,
+            "uniqueID": 1744258354791,
+            "ioValues": [
+                {
+                    "name": "x length",
+                    "ioValue": 10
+                },
+                {
+                    "name": "y length",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Creates a new rectangle."
+        }
+    ],
     "allConnectors": [],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
