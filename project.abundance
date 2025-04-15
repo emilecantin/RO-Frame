@@ -4,7 +4,16 @@
     "x": 0,
     "y": 0,
     "uniqueID": 1744258314640,
-    "ioValues": [],
+    "ioValues": [
+        {
+            "name": "Height",
+            "ioValue": 12
+        },
+        {
+            "name": "Width",
+            "ioValue": 24
+        }
+    ],
     "description": "Molecules provide an organizational structure to contain atoms. Double click on a molecule to enter it. Use the up arrow in the upper right hand corner of the screen to go up one level.",
     "topLevel": true,
     "allAtoms": [
@@ -14,29 +23,101 @@
             "x": 0.98,
             "y": 0.5,
             "uniqueID": 1744258323684,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "number or geometry",
+                    "ioValue": 1744258354791
+                }
+            ],
             "description": "Connect geometry here to make it available in the next level up. "
         },
         {
             "atomType": "Rectangle",
             "name": "Rectangle",
-            "x": 0.5118733509234829,
-            "y": 0.37433155080213903,
+            "x": 0.16226912928759893,
+            "y": 0.43315508021390375,
             "uniqueID": 1744258354791,
             "ioValues": [
                 {
                     "name": "x length",
-                    "ioValue": 10
+                    "ioValue": 12
                 },
                 {
                     "name": "y length",
-                    "ioValue": 10
+                    "ioValue": 24
                 }
             ],
             "description": "Creates a new rectangle."
+        },
+        {
+            "atomType": "Input",
+            "name": "Height",
+            "x": 0.04,
+            "y": 0.32085561497326204,
+            "uniqueID": 1744751645938,
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Input",
+            "name": "Width",
+            "x": 0.04,
+            "y": 0.5864527629233511,
+            "uniqueID": 1744751674363,
+            "ioValues": [],
+            "description": "Adds an input to the parent molecule. If the parent molecule is the top level of the project then the input will be available when the project is shared or imported into another project. Name is editable",
+            "type": "number"
+        },
+        {
+            "atomType": "Extrude",
+            "name": "Extrude",
+            "x": 0.4995602462620933,
+            "y": 0.2709447415329768,
+            "uniqueID": 1744751737511,
+            "ioValues": [
+                {
+                    "name": "geometry",
+                    "ioValue": 1744258354791
+                },
+                {
+                    "name": "height",
+                    "ioValue": 10
+                }
+            ],
+            "description": "Extrudes a 2D shape. Input can be negitive. "
         }
     ],
-    "allConnectors": [],
+    "allConnectors": [
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "number or geometry",
+            "ap2Primary": false,
+            "ap1ID": 1744258354791,
+            "ap2ID": 1744258323684
+        },
+        {
+            "ap1Name": "geometry",
+            "ap2Name": "geometry",
+            "ap2Primary": true,
+            "ap1ID": 1744258354791,
+            "ap2ID": 1744751737511
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "x length",
+            "ap2Primary": false,
+            "ap1ID": 1744751645938,
+            "ap2ID": 1744258354791
+        },
+        {
+            "ap1Name": "number or geometry",
+            "ap2Name": "y length",
+            "ap2Primary": false,
+            "ap1ID": 1744751674363,
+            "ap2ID": 1744258354791
+        }
+    ],
     "unitsKey": "Inches",
     "fileTypeVersion": 1,
     "compiledBom": {},
